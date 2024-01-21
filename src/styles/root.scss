@@ -1,0 +1,21 @@
+@import 'typography';
+
+html, body {
+  min-height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  color: (var(--color-font-primary));
+  background-color: (var(--color-background-primary));
+  box-sizing: content-box;
+  @include body1;
+}
+
+:root {
+  --color-font-primary: #CFD6F1;
+  --color-font-secondary: #2A283B;
+  --color-background-primary: #1E1E2D;
+  --color-background-secondary: #181824;
+  --color-accent-primary: #C5A7F2;
+  --color-accent-secondary: #B6BEF9;
+}

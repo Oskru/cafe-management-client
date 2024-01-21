@@ -1,0 +1,43 @@
+@import '../../styles/typography.scss';
+@import url('https://unpkg.com/css.gg@2.0.0/icons/css/clapper-board.css');
+@import url('https://unpkg.com/css.gg@2.0.0/icons/css/arrow-right-r.css');
+
+button {
+  all: unset;
+  @include body2;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.1s ease-in;
+  transition: color 0.1s ease-in;
+  box-sizing: border-box;
+  margin-top: 10px;
+  padding: 10px;
+  .gg {
+    margin-left: 4px;
+  }
+
+  &.collapsed {
+      justify-content: center;
+      .gg {
+        margin-left: 0px;
+      }
+  }
+
+  &:hover {
+    background: var(--color-accent-secondary);
+    color: var(--color-font-secondary);
+  }
+
+  &:active {
+    background: var(--color-accent-primary);
+    color: var(--color-font-secondary);
+  }
+}
+
+.gg {
+  height: 22px;
+  width: 22px;
+}
