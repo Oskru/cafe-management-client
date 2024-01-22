@@ -2,8 +2,6 @@
   background-color: var(--color-background-secondary);
   height: 100vh;
   padding: 10px;
-
-  &.collapsed {
-    width: 50px;
-  }
+  display: flex;
+  flex-direction: column;
 }

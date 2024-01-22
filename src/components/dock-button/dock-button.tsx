@@ -17,9 +17,7 @@ export function DockButton(props: DockButtonProps) {
     >
       <div className={props.icon + ' gg'}></div>
 
-      {props.isExpanded ? (
-        <span style={{ marginLeft: '25px' }}>{props.text}</span>
-      ) : null}
+      <span style={{ marginLeft: '30px' }}>{props.text}</span>
     </button>
   );
 }
