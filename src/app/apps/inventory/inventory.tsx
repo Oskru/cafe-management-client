@@ -3,17 +3,8 @@ import { Container } from '../../../utils/components/container/container';
 import { Modal } from '../../../utils/components/modal/modal';
 import { AppTemplate } from '../app-template';
 import './inventory.scss';
-import { ProductCard } from './product-card';
 import { PRODUCTS_URL } from '../../constants/api';
 import { Product } from '../../../interfaces/product';
-
-const actions = [
-  {
-    title: 'Add product',
-    icon: 'gg-add-r',
-    onClick: () => {},
-  },
-];
 
 export function Inventory() {
   const [showModal, setShowModal] = useState(false);
@@ -26,6 +17,16 @@ export function Inventory() {
     stock: 0,
     image: '',
   });
+
+  const actions = [
+    {
+      title: 'Add product',
+      icon: 'gg-add-r',
+      onClick: () => {
+        setShowModal(true);
+      },
+    },
+  ];
 
   const handleChangeProduct = (e: React.ChangeEvent<any>) => {
     setProduct({ ...product, [e.target.placeholder]: e.target.value });
@@ -65,9 +66,30 @@ export function Inventory() {
     <AppTemplate appName='Inventory' className='inventory' actions={actions}>
       <h3>All products</h3>
       <Container display='flex' flexDirection='row' flexWrap='wrap'>
-        {products.map((product: Product) => (
-          <ProductCard key={product.id} {...product} />
-        ))}
+        <table>
+          <thead>
+            <tr>
+              <th>Product ID</th>
+              <th>Name</th>
+              <th>Description</th>
+              <th>Price</th>
+              <th>Stock</th>
+              <th>Image</th>
+            </tr>
+          </thead>
+          <tbody>
+            {products.map((product: Product, index: number) => (
+              <tr key={index}>
+                <td>{product.id}</td>
+                <td>{product.name}</td>
+                <td>{product.description}</td>
+                <td>{product.price}</td>
+                <td>{product.quantity}</td>
+                <td>{product.imageUrl}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </Container>
       <Modal
         show={showModal}

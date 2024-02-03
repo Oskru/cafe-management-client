@@ -42,9 +42,6 @@ const columns = [
   {
     name: 'Is Active',
   },
-  {
-    name: 'Roles',
-  },
 ];
 
 interface Employee {
@@ -151,7 +148,6 @@ export function Employees() {
               <td>{employee.workHours}</td>
               <td>{employee.startDate}</td>
               <td>{employee.isActive}</td>
-              <td>{employee.roles}</td>
             </tr>
           ))}
         </tbody>
