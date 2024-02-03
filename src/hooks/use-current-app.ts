@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useInstalledApps } from './use-installed.apps';
-import { App } from '../utils/data/installed-apps';
+import { App } from '../interfaces/app';
 
 export function useCurrentApp() {
   const installedApps = useInstalledApps();
