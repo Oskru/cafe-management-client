@@ -1,6 +1,4 @@
 @import '../../styles/typography.scss';
-@import url('https://unpkg.com/css.gg@2.0.0/icons/css/clapper-board.css');
-@import url('https://unpkg.com/css.gg@2.0.0/icons/css/arrow-right-r.css');
 
 button {
   all: unset;
@@ -18,7 +16,6 @@ button {
   overflow: hidden;
   max-height: 42px;
 
-
   &:hover {
     background: var(--color-accent-secondary);
     color: var(--color-font-secondary);
@@ -34,4 +31,8 @@ button {
   min-width: 22px;
   min-height: 22px;
   margin-left: 4px;
+}
+
+.active-app {
+  background: var(--color-accent-tertiary);
 }

@@ -1,5 +1,14 @@
 @import 'typography';
 
+// gg icons
+@import url('https://unpkg.com/css.gg@2.0.0/icons/css/clapper-board.css');
+@import url('https://unpkg.com/css.gg@2.0.0/icons/css/arrow-right-r.css');
+@import url('https://unpkg.com/css.gg@2.0.0/icons/css/shopping-bag.css');
+@import url('https://unpkg.com/css.gg@2.0.0/icons/css/add-r.css');
+@import url('https://unpkg.com/css.gg@2.0.0/icons/css/profile.css');
+@import url('https://unpkg.com/css.gg@2.0.0/icons/css/shopping-cart.css');
+@import url('https://unpkg.com/css.gg@2.0.0/icons/css/close-r.css');
+
 html, body {
   min-height: 100vh;
   width: 100%;
@@ -18,4 +27,5 @@ html, body {
   --color-background-secondary: #181824;
   --color-accent-primary: #C5A7F2;
   --color-accent-secondary: #B6BEF9;
+  --color-accent-tertiary: #444255;
 }
