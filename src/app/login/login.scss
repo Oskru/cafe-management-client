@@ -1,0 +1,36 @@
+@import '../../styles/typography.scss';
+
+.login {
+  background: var(--color-background-secondary);
+  border-radius: 10px;
+  height: auto;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  margin: auto;
+  margin-top: 100px;
+
+  input {
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    @include body1;
+  }
+
+  &__submit {
+    width: 100px;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+    background: var(--color-primary);
+    color: var(--color-text-on-primary);
+    border: none;
+    cursor: pointer;
+    @include body1;
+  }
+}

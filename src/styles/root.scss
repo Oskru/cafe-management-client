@@ -8,6 +8,9 @@
 @import url('https://unpkg.com/css.gg@2.0.0/icons/css/profile.css');
 @import url('https://unpkg.com/css.gg@2.0.0/icons/css/shopping-cart.css');
 @import url('https://unpkg.com/css.gg@2.0.0/icons/css/close-r.css');
+@import url('https://unpkg.com/css.gg@2.0.0/icons/css/boy.css');
+@import url('https://unpkg.com/css.gg@2.0.0/icons/css/trash.css');
+@import url('https://unpkg.com/css.gg@2.0.0/icons/css/file.css');
 
 html, body {
   min-height: 100vh;
@@ -28,4 +31,26 @@ html, body {
   --color-accent-primary: #C5A7F2;
   --color-accent-secondary: #B6BEF9;
   --color-accent-tertiary: #444255;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  background: var(--color-background-secondary);
+  color: var(--color-font-primary);
+  @include body1;
+  
+  th, td {
+    padding: 10px;
+    text-align: left;
+  }
+
+  th {
+    background: var(--color-accent-secondary);
+    color: var(--color-font-secondary);
+  }
 }

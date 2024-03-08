@@ -1,9 +1,14 @@
 export interface Product {
-  id: number;
+  id?: number;
   name: string;
   price: number;
-  description: string;
-  category: string;
+  description?: string;
   imageUrl: string;
   quantity: number;
+  isSeasonal?: boolean;
+  isAvailable: boolean;
+  productCategory: {
+    id: number;
+    categoryName?: string;
+  };
 }

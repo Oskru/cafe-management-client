@@ -25,8 +25,15 @@ export function Dock() {
 
       <DockButton
         onClick={toggleDock}
+        text={window.sessionStorage.getItem('username') ?? 'Login'}
+        icon='gg-profile'
+        style={{ marginTop: 'auto' }}
+      />
+      <DockButton
+        onClick={toggleDock}
         text='Collapse'
         icon='gg-arrow-right-r'
+        style={{ marginBottom: '20px' }}
       />
     </motion.aside>
   );
